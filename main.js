@@ -3,11 +3,17 @@ var app = new Vue({
     data: {
         message: 'Spam!',
         spamList: ['a', 'b', 'c'],
-        show: false
+        show: false,
+        counter: 0,
+        style: {
+            backgroundColor: 'black',
+            color: 'white'
+        }
     },
     methods: {
         handleClick: function(e) {
-            app.show = !app.show
+            this.show = !this.show
+            this.counter += 1
         }
     },
     created: function() {

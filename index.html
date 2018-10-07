@@ -7,15 +7,19 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ message }}</h1>
+      <h1>({{ message.length }}){{ message }}</h1>
       <ol>
         <li v-for="item in spamList">{{ item }}</li>
       </ol>
       <button v-on:click="handleClick">Click</button>
-      <input v-model="message">
       <transition>
-      <p v-if="show">Hello</p>
+      <span v-if="show">{{ message }} {{ counter }}</span>
       </transition>
+      <br>
+      <input v-model="message"><br>
+      <input type="text" v-bind:value="message" v-bind:style="style"><br>
+      <hr>
+      <pre>{{ $data }}</pre>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
