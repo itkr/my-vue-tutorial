@@ -7,23 +7,32 @@
   </head>
   <body>
     <div id="app">
-      <h1>({{ message.length }}){{ message }}</h1>
+      <h1>My Vue.js</h1>
+      <h2>Model</h2>
+      <p>({{ message.length }}) {{ message }}</p>
+      <input v-model="message">
+      <h2>Style</h2>
+      <input type="text" v-bind:value="message" v-bind:style="style">
+      <h2>Loop</h2>
       <ol>
         <li v-for="item in spamList">{{ item }}</li>
       </ol>
+      <h2>Transition</h2>
       <button v-on:click="handleClick">Click</button>
       <transition>
       <span v-if="show">{{ message }} {{ counter }}</span>
       </transition>
-      <br>
-      <input v-model="message"><br>
-      <input type="text" v-bind:value="message" v-bind:style="style"><br>
-      <hr>
-      <pre>{{ $data }}</pre>
+      <h2>SVG</h2>
+      <input type="range" min="0" max="100" v-model="radius"><br>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink" />
       </svg>
-      <input type="range" min="0" max="100" v-model="radius">
+      <h2>Show</h2>
+      <div v-if="show">v-if</div>
+      <div v-show="show">v-show</div>
+      <hr>
+      <h2>Data</h2>
+      <pre>{{ $data }}</pre>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
