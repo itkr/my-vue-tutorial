@@ -30,6 +30,15 @@
       <h2>Show</h2>
       <div v-if="show">v-if</div>
       <div v-show="show">v-show</div>
+      <template v-if="show">
+        template
+      </template>
+      <div v-if="message == 'Spam!'" key="content-visibule">
+        Spam!
+      </div>
+      <div v-else key="content-visibule">
+        → Spam!
+      </div>
       <hr>
       <h2>Data</h2>
       <pre>{{ $data }}</pre>
