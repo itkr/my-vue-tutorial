@@ -2,7 +2,20 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'Spam!',
-        spamList: ['a', 'b', 'c'],
+        spamList: [
+            {
+                id: 1,
+                s: 'a'
+            },
+            {
+                id: 2,
+                s: 'b'
+            },
+            {
+                id: 2,
+                s: 'c'
+            }
+        ],
         show: false,
         counter: 0,
         style: {

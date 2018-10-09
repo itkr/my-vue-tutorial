@@ -15,7 +15,9 @@
       <input type="text" v-bind:value="message" v-bind:style="style">
       <h2>Loop</h2>
       <ol>
-        <li v-for="item in spamList">{{ item }}</li>
+        <li v-for="(item, key, index) in spamList" v-bind:key="item.id">
+          {{ item.id }}, {{ item.s }}, {{ key }}
+        </li>
       </ol>
       <h2>Transition</h2>
       <button v-on:click="handleClick">Click</button>
