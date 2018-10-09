@@ -8,7 +8,8 @@ var app = new Vue({
         style: {
             backgroundColor: 'black',
             color: 'white'
-        }
+        },
+        radius: 50
     },
     methods: {
         handleClick: function(e) {
