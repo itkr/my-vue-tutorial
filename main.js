@@ -42,5 +42,9 @@ var app = new Vue({
         }.bind(this)).catch(function(e) {
             console.error(e)
         })
+    },
+    mounted: function() {
+        console.log(this.$el)
+        console.log(this.$refs.hello)
     }
 })
