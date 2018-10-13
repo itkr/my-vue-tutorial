@@ -17,8 +17,16 @@
       <ol>
         <li v-for="(item, key, index) in spamList" v-bind:key="item.id">
           {{ item.id }}, {{ item.s }}, {{ key }}
+          <span v-if="key == 0">first</span>
         </li>
       </ol>
+      <h3>json</h3>
+      <ul>
+        <li v-for="(item, key, index) in aList" v-bind:key="item.id">
+          {{ item.id }}, {{ item.s }}, {{ key }}
+          <span v-if="key == 0">first</span>
+        </li>
+      </ul>
       <h2>Transition</h2>
       <button v-on:click="handleClick">Click</button>
       <transition>
@@ -45,6 +53,8 @@
       <h2>Data</h2>
       <pre>{{ $data }}</pre>
     </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/dist/lodash.min.js"></script> -->
+    <script src="http://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
   </body>
