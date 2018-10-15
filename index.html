@@ -52,6 +52,19 @@
       <h2>ref</h2>
       <div ref="hello">hello</div>
       <hr>
+      <h2>テンプレート制御</h2>
+      <input v-model="message2">
+      <h3>v-pre</h3>
+      <p v-pre> {{ message2 }} </p>
+      <h3>v-once</h3>
+      <p v-once> {{ message2 }} </p>
+      <h3>v-text</h3>
+      <p v-text="message2"> </p>
+      <h3>v-html</h3>
+      <p v-html="message2"> </p>
+      <h3>v-cloak</h3>
+      <p v-cloak> {{ message2 }} </p>
+      <hr>
       <h2>Data</h2>
       <pre>{{ $data }}</pre>
     </div>

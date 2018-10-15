@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'Spam!',
+        message2: 'Hello! <strong>Vue.js</strong>',
         aList: [],
         spamList: [
             {
